@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" style="line-height: inherit !important;">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width; initial-scale=1.0;" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="”x-apple-disable-message-reformatting”" />
+    <title>HTML Email</title>
+
+    <!------CSS STYLES----->
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&amp;display=swap');
+      * {
+				line-height: inherit !important;
+		}
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #dddddd !important;
+        font-family: 'Fira Sans', Helvetica, Arial, sans-serif !important;
+      }
+      a{
+          text-decoration: none !important;
+          color: inherit !important;
+      }
+      a[x-apple-data-detectors=true] {
+        color: inherit !important;
+        text-decoration: none !important;
+	  }
+      table {
+        border-spacing: 0 !important;
+      }
+      p{
+        margin: 0 0 2px !important;
+        font-size: 18px !important;
+        letter-spacing: 1.95px !important;
+        line-height: 28px !important;
+        color: black !important;
+        font-weight: 100 !important;
+        font-family: 'Fira Sans' !important;
+      }
+      .footer p{
+		font-size: 18px !important;
+        padding-left: 30px !important;
+	  }
+      h1{
+        color: black !important;
+        font-size: 48px !important;
+        font-family: 'Fira Sans' !important;
+        text-align: center !important;
+      }
+      h1 span{
+        font-size: 48px !important;
+        font-family: 'Fira Sans' !important;
+        text-align: center !important;
+      }
+      h2{
+        color: black !important;
+        font-family: 'Fira Sans' !important;
+        font-size: 26px !important;
+        letter-spacing: 1.5px !important;
+        line-height: 40px !important;
+        font-weight: 400 !important;
+      }
+      h3{
+        color: black !important;
+        font-family: 'Fira Sans' !important;
+        font-size: 26px !important;
+        letter-spacing: 1.5px !important;
+      }
+      h4{
+          color: black !important;
+          text-align: center !important;
+          line-height: 38px !important; 
+          color: black !important; 
+          font-size: 26px !important; 
+          padding-right:20px !important; 
+          padding-left:20px !important; 
+          letter-spacing: 1.5px !important;
+      }
+      .essentialTitle{
+          font-size: 19px !important;
+          line-height: 32px !important;
+          letter-spacing: 1.5px !important;
+      }
+      .stats{
+          color: #3F44E9 !important;
+          font-size: 28px !important;
+      }
+      .statsLeft{
+          text-align: start !important;
+          padding-right: 30px !important;
+          font-size: 26px !important;
+      }
+      .onitLogo{
+          text-align: center !important;
+          height: 42px !important;
+          padding-top: 36px !important;
+          padding-bottom: 36px !important;
+      }
+      .beachHouseImg{
+        width: 100% !important;
+        height: 450px !important;
+        display: block !important;
+      }
+      .bodyHeader{
+          color: #000000 !important;
+          letter-spacing: 2px !important;
+          font-size: 48px !important;
+          line-height: 120% !important;
+          padding-top: 0px !important;
+          padding-bottom: 4px !important ;
+      }
+      #learnMoreCta{
+        font-size: 31px !important; 
+        letter-spacing: 1.5px !important;
+        font-family: 'Fira Sans' !important; 
+        text-align: center !important; 
+        background-color: #3F44E9 !important; color: white !important; 
+        margin-top: 50px !important; 
+        border-radius: 57px !important; 
+        height: 54px !important; 
+        width: 280px !important; 
+        transition: background-color .25s ease-out !important; 
+        padding: 10px 30px 48px; border: rgba(255,255,255,0);
+      }
+      #learnMoreCta:hover{
+        background-color: #3237be !important;
+      }
+      .twofivemilRow{
+        padding-bottom: 50px !important;
+        display: block !important;
+      }
+      .twoFiveMillText{
+          font-size: 26px !important;
+      }
+      .burglarRow{
+          display: block !important;
+      }
+      .goOnlineRow{
+          display: block !important;
+          margin-top: 110px !important;
+      }
+      .onithelpRow{
+          margin-top: 60px !important;
+          display: block !important;
+      }
+      .rightArrow{
+        padding-left: 10px !important;
+        line-height: inherit !important;
+        top: 1.25em !important;
+        font-size: 10% !important;
+        position: relative !important;
+      }
+      .leftArrow{
+        padding-right: 10px !important;
+        line-height: inherit !important;
+        top: 1.25em !important;
+        font-size: 10% !important;
+        top: 1.2em !important;
+        position: relative !important;
+      }
+      .benefitsTable{
+          margin-bottom: 50px !important;
+      }
+      .benefitsData{
+        padding-top: 60px !important;
+      }
+      .benefitsTitle{
+        font-size: 21px !important;
+        line-height: 30px !important; 
+        color: black !important; 
+        padding-left: 20px !important; 
+        padding-right: 20px !important; 
+        margin-top: 26px !important; 
+        font-weight: 400 !important;
+      }
+      .footer-padding{
+        padding-left: 10px !important;
+		padding-right: 10px !important;
+      }
+      .social-icons{
+        display: inline-block !important;
+        margin-top: 50px !important;
+        margin-bottom: 10px !important;
+      }
+      .onit-footer{
+          margin-top: 64px !important;
+          margin-bottom: 30px !important;
+      }
+      .footerText{
+          font-weight: 400 !important;
+          font-size: 15px !important;
+          line-height: 23px !important;
+          margin-top: 20px !important;
+      }
+      .helloCustomer{
+        padding-top: 140px !important;
+        font-family: 'Fira Sans' !important;
+        font-size: 26px !important;
+        letter-spacing: 1.5px !important;
+        text-align: start !important;
+      }
+      td {
+        padding: 0;
+      }
+      img {
+        border: 0;
+        max-width: 100% !important;
+      }
+      .wrapper {
+        width: 100% !important;
+        table-layout: fixed !important;
+        background-color: rgb(128, 128, 128) !important;
+        padding-bottom: 20px !important;
+      }
+      a .webkit {
+        width: 100% !important;
+        max-width: 840px !important;
+        background-color: #282828 !important;
+      }
+      .black {
+        background-color: black;
+      }
+      .goOnlineText{
+          text-align: start !important;
+          color: #FFFFFF !important;
+          padding-left: 30px;
+          font-size: 26px !important;
+      }
+      .goOnlineText span{
+          font-size: 28px !important;
+      }
+      .cameraText{
+            color: black !important;
+            font-weight: 400 !important; 
+            font-size: 24px !important;
+            line-height: 34px !important; 
+            padding-right:20px !important; 
+            padding-left:20px !important;
+            padding-top: 0px !important; 
+            letter-spacing: 1.5px !important;
+        }
+        .smokeAlarmText{
+            color: black !important; 
+            font-weight: 400 !important;
+            font-size: 24px !important;
+            line-height: 34px !important; 
+            padding-right:20px !important; 
+            padding-left:20px !important;
+            padding-top: 0px !important; 
+            letter-spacing: 1.5px !important;
+        }
+        .monitorText{
+            color: black !important; 
+            font-size: 24px !important;
+            font-weight: 400 !important;
+            line-height: 34px !important; 
+            padding-right:20px !important; 
+            padding-left:20px !important;
+            padding-top: 0px !important; 
+            letter-spacing: 2.5px !important;
+       }
+      .outer {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        max-width: 600px;
+        border-spacing: 0;
+        letter-spacing: 2px;
+        color: white;
+      }
+      .outer .image {
+        width: 100%;
+        max-width: 130px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .outer .cred {
+        color: #ffffff;
+        letter-spacing: 1.85px;
+        line-height: 26px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        width: 100%;
+        max-width: 220px !important;
+        display: inline-block !important;
+        vertical-align: top !important;
+        min-width: 200px !important;
+        margin-left: 20px !important;
+      }
+
+      @media screen and (max-width: 600px) {
+      }
+      @media screen and (max-width: 300px) {
+        table .emailBody {
+          max-width: 600px !important;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+        h1 {
+          font-size: 42px !important;
+          font-family: 'Fira Sans' !important;
+          letter-spacing: 3.75px !important;
+          margin-left: 0px !important ;
+          margin-right: 0px !important;
+          padding-right: 20px !important;
+          padding-right: 20px !important;
+          color: black !important;
+          margin-top: 26px !important;
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+          text-align: center !important;
+        }
+        h1 span{
+          margin-top: 26px !important;
+          font-size: 42px !important;
+          font-family: 'Fira Sans' !important;
+          letter-spacing: 3.75px !important;
+          text-align: center !important;
+          letter-spacing: 3.75px !important;
+        }
+        h2{
+            font-size: 32px !important;
+            line-height: 42px !important;
+        }
+        h3 {
+          font-size: 30px !important;
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+        h4{
+            font-size: 30px !important;
+        }
+        h5 {
+          font-size: 24px !important;
+        }
+        p {
+          font-size: 38px !important;
+          letter-spacing: 3.75px !important;
+          line-height: 52px !important;
+          font-weight: 300 !important;
+          margin-left: 0px !important;
+          margin-right: 0px !important;
+          padding-right: 20px !important;
+          padding-right: 20px !important;
+          margin-bottom: 24px !important;
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+        .topHeader{
+            color: white !important;
+            font-size: 52px !important;
+            text-align: center !important;
+            letter-spacing: 4px !important;
+            margin-top: 20px !important;
+        }
+        .img_beachHouse{
+            width: 100% !important;
+        }
+        .learnHowCta{
+            height: 52px !important;
+            font-size: 34px !important;
+            width: 320px !important;
+        }
+        .bodyHeader{
+            color: black !important;
+            font-size: 48px !important;
+            margin-top: 10px !important;
+            text-align: center !important;
+        }
+        .helloCustomer{
+        font-size: 36px !important;
+        line-height: 44px !important;
+        }
+        span{
+            font-size: 32px !important;
+            padding: 0px !important;
+        }
+        .twofivemilRow{
+            padding-bottom: 70px !important;
+            padding-left: 24px !important;
+            padding-top: 10px !important;
+            padding-right: 24px !important;
+        }
+        .twoFiveMillText{
+            font-size: 34px !important;
+            line-height: 44px !important;
+            text-align: center !important;
+        }
+        .imageTab{
+          border-collapse: collapse !important;
+          border-spacing: 0 !important;
+        }
+        .swap{
+          height:100% !important; 
+          display:block !important;
+          width:100% !important;
+          height: auto !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          border-bottom: 0px !important;
+          height: 100px !important;
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+        }
+        #learnMoreCta{
+            background-color: #3F44E9 !important; color: white !important; 
+            height: 52px !important;
+            width: 340px !important;
+            border-radius: 40px !important;
+            font-size: 40px !important;
+            padding-top: 30px !important;
+            padding-bottom: 50px !important;
+            line-height: 20px !important;
+            padding: 8px 30px 20px; border: rgba(255,255,255,0);
+        }
+        .learnMoreVerbiage{
+            margin-top: -40px !important;
+            font-size: 36px !important;
+            line-height: 46px !important;
+            padding-top: 30px !important;
+        }
+        .onithelpRow{
+            margin-top: 130px !important;
+            margin-bottom: 50px !important;
+        }
+        .benefitsData{
+           text-align: center !important;
+            display:block !important;
+          width:100% !important;
+          height: auto !important;
+          padding-top: 90px !important;
+        }
+        .line {
+          height: 42px !important;
+          margin-bottom: 32px !important;
+        }
+        .img_sixtyPercent{
+            height: 150px !important;
+           margin-top: 16px !important;
+        }
+        .img_secureHome{
+            height: 170px !important;
+            margin-top: -5px !important;
+        }
+        .img_Camera{
+            width: 75% !important;
+            margin-top: 70px !important;
+        }
+        .img_SmokeDetector{
+            width: 75% !important;
+            margin-top: 520px !important;
+        }
+        .img_Monitor{
+            margin-top: 200px !important;
+            width: 75% !important;
+            z-index: -10 !important;
+        }
+        .essentialTitle{
+            font-size: 32px !important;
+            line-height: 54px !important;
+            padding-top: 680px !important;
+        }
+        .rightArrow{
+            display: none !important;
+        }
+        .leftArrow{
+            display: none !important;
+        }
+        .statsLeft{
+          text-align: center !important;
+          margin: 0% !important;
+          font-size: 32px !important;
+          line-height: 44px !important;
+          padding: 0% !important;
+          margin-top: 90px !important;
+          margin-bottom: 120px !important;
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+        .cameraText{
+            color: black !important; 
+            font-size: 34px !important;
+            line-height: 44px !important;
+            font-weight: 400 !important; 
+            padding-right:20px !important; 
+            padding-left:20px !important;
+            padding-top: 390px !important; 
+            letter-spacing: 1.5px !important;
+        }
+        h4 .smokeAlarmTD{
+            padding-top: 90px !important;
+        }
+        .smokeAlarmText{
+            line-height: 44px !important; 
+            color: black !important; 
+            font-size: 36px !important; 
+            padding-right:20px !important;
+            font-weight: 400 !important; 
+            padding-left:20px !important;
+            margin-top: 890px !important; 
+            letter-spacing: 1.5px !important; 
+        }
+        .monitorText{
+            line-height: 44px !important; 
+            color: black !important; 
+            font-size: 36px !important; 
+            padding-right:20px !important; 
+            padding-left:20px !important;
+            font-weight: 400 !important;
+            margin-top: 590px !important; 
+            letter-spacing: 1.5px !important;
+        }
+        .img_WomanWithDog{
+            padding-top: 40px !important;
+            width: 75% !important;
+            margin-top: 0px !important;
+            margin-bottom: -50px !important;
+        }
+        .goOnlineRow{
+          display: block !important;
+          margin-top: 200px !important;
+        }
+        .goOnlineData{
+            padding-top: 30px !important;
+            padding-bottom: 0px !important;
+        }
+        .goOnlineText{
+            color: #FFFFFF !important;
+          text-align: center !important;
+          font-weight: 700 !important;
+          line-height: 46px !important;
+          font-size: 34px !important;
+          margin: 0% !important;
+          padding: 0% !important;
+          padding-bottom: 40px !important;
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+        .goOnlineText span{
+            font-size: 36px !important;
+        }
+        .benefitsTable{
+            margin-top: 50px !important;
+            margin-bottom: 120px !important;
+        }
+        .img_radioTower{
+            height: 125px !important;
+        }
+        .benefitsTitle{
+            font-size: 36px !important;
+            line-height: 46px !important;
+            padding-left: 140px !important;
+            padding-right: 140px !important;
+            margin-top: 20px !important;
+        }
+        .footer-padding{
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+            width: 100% !important;
+        }
+		.onit-footer{
+            width: 150px !important;
+            margin-bottom: 60px !important;
+            margin-top: 70px !important;
+        }
+        .social-icons{
+         display: inline-block !important;
+         height: 70px !important;
+         margin-top: 100px !important;
+         margin-bottom: 2px !important;
+        }
+        .footer p{
+		font-size: 32px !important;
+	    }
+        .footerText{
+          font-weight: 400 !important;
+          margin-top: 80px !important;
+          font-size: 19px !important;
+          line-height: 32px !important;
+        }
+        .outer .cred {
+          font-size: 12px;
+          max-width: 100px;
+          width: 50%;
+        }
+        .outer .image {
+          width: 50%;
+        }
+      }
+    </style>
+  <style>body {
+margin: 0 !important; padding: 0 !important; background-color: #dddddd !important; font-family: 'Fira Sans', Helvetica, Arial, sans-serif !important;
+}
+img {
+border: 0; max-width: 100% !important;
+}
+</style></head>
+
+  <!----Body------>
+  <body style="line-height: inherit !important; font-family: 'Fira Sans', Helvetica, Arial, sans-serif !important; margin: 0; padding: 0;" bgcolor="#dddddd">
+    <center class="wrapper" style="line-height: inherit !important; width: 100% !important; table-layout: fixed !important; background-color: rgb(128, 128, 128) !important; padding-bottom: 20px !important;">
+      <div class="webkit" style="line-height: inherit !important;">
+        <table class="outer" align="center" bgcolor="#FFFFFF" style="line-height: inherit !important; border-spacing: 0 !important; width: 100%; text-align: center; max-width: 600px; letter-spacing: 2px; color: white; margin: 0 auto;">
+          <tr style="line-height: inherit !important;">
+            <td style="line-height: inherit !important; padding: 0; background-color: #FFFFFF !important";>
+              <table style="width: 600px; max-width: 600px; height: 25px; line-height: inherit !important; border-spacing: 0 !important; margin: 0;" bgcolor="white">
+                <tr style="line-height: inherit !important;">
+                  <td style="line-height: inherit !important; padding: 0;">
+                      <center style="line-height: inherit !important;">
+                        <a href="https://www.onithome.com" target="_blank">
+                          <img class="onitLogo" src="https://docs.google.com/uc?id=18dNdCP9vIOwRg9rj7Bz_wovfArDxOpCM" alt="Onit logo in blue and black" style="line-height: inherit !important; text-align: center !important; height: 40px !important; padding-top: 36px !important; padding-bottom: 36px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                        </center>
+                  </td>
+              </tr>
+            </table>
+            <table style="width: 100%; max-width: 600px; height: 30px; line-height: inherit !important; border-spacing: 0 !important; margin: 0; background: linear-gradient(to bottom,#3F44E9,#716DF1);">
+                <tr style="line-height: inherit !important;">
+                    <td style="line-height: inherit !important; padding: 0;">
+                    <h1 class="topHeader" style="line-height: 120% !important; font-family: 'Fira Sans' !important; color: white !important; margin-top: 40px !important; margin-bottom: 40px !important; font-size: 48px !important; text-align:center !important; padding-top: 36px !important; padding-bottom: 36px !important;">
+                    Is Your Vacation<br> Home Secure?</h1>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%; max-width: 600px; border-spacing: 0 !important; margin: 0;">
+                <tr style="line-height: inherit !important;">
+                    <td width="100%" align="center" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <img class="img_beachHouse" src="https://docs.google.com/uc?id=1gNln8xdIZGsTgsu7tjIpQFCiiDwJwuSr" alt="Image of a beach house patio with a hammock overseeing the ocean in the background" style="line-height: inherit !important; pointer-events: none !important; -moz-user-select: none;
+                        -khtml-user-select: none; -webkit-user-select: none; user-select: none;max-width: 100% !important; border: 0;">
+                    </td>
+                </tr>
+            </table>
+    <!----CTA----->         
+                <table class="" align="center" style="line-height: inherit !important; border-spacing: 0 !important;">
+                    <tr style="line-height: inherit !important;">
+                        <td style="line-height: inherit !important; padding: 0;">
+                                <center style="line-height: inherit !important;">
+                                    <a href="https://www.onithome.com/blog/security/how-to-keep-your-vacation-home-secure-year-round/" target="_blank">
+                                        <button id="learnMoreCta">Learn More</button>
+                                    </a>
+                                </center>
+                        </td>
+                    </tr>        
+                </table>
+    <!----Hello Client----->
+              <table class="emailBody" width="100%" align="center" style="border-spacing: 0 !important; padding-left: 24px; padding-right: 24px; padding-bottom: 20px; max-width: 700px; line-height: inherit !important; margin: 0 auto;" bgcolor="#FFFFFF">
+                <tr style="line-height: inherit !important;">
+                    <td style="line-height: inherit !important; padding: 0;">
+                        <p class="helloCustomer" style="letter-spacing: 1.5px !important; color: black !important; font-weight: 100 !important; font-family: 'Fira Sans' !important; padding-top: 140px !important; margin: 0 0 2px;" align="start">
+                            Hello{{#if first_name}} {{ first_name }}{{/if}},
+                        </p>
+                        <h1 class="bodyHeader" style="line-height: 120% !important; font-family: 'Fira Sans' !important; color: black !important; letter-spacing: 2px !important; font-size: 48px !important; padding-top: 0px !important; text-align:center !important; padding-bottom: 4px !important;">Did you know?</h1> 
+                    </td>
+                </tr>
+                <tr class="twofivemilRow" style="line-height: inherit !important; padding-bottom: 40px !important;  padding-top: 10px !important; display: block !important;">
+                    <td style="line-height: inherit !important; padding: 0;">
+                        <h2 class="twoFiveMillText" style="color: black !important; font-family: 'Fira Sans' !important; text-align:center !important; letter-spacing: 1.5px !important; font-weight: 400 !important;">
+                            There are over <span style="color: #3F44E9; font-size: 32px; font-weight: 700; line-height: inherit !important;">2.5 million</span> burglaries
+                            every year in the United States.
+                        </h2>
+                    </td>
+                </tr>
+                </table>
+                <table class="imageTab" width="100%" style="height: 200px; line-height: inherit !important; border-spacing: 0 !important;">
+                    <tr class="burglarRow" style="line-height: inherit !important; display: block !important;">
+                      <td width="34%" class="swap" align="center" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <img class="img_sixtyPercent" src="https://docs.google.com/uc?id=1HISJyDoZ1MiHFwgu-ocUYmRLltaHGRsl" alt="Pie chart indicating sixty percent in purple" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                      </td>
+                      <td width="64%" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <h2 class="statsLeft" style="color: black !important; font-family: 'Fira Sans' !important; letter-spacing: 1.5px !important; font-weight: 400 !important; padding-right: 30px !important;" align="start"><span style="color: #3F44E9; font-size: 28px; font-weight: 700; line-height: inherit !important;">60% of burglars</span> casing 
+                            homes would be deterred 
+                            by a security system.</h2>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="imageTab" width="100%" style="height: 200px; line-height: inherit !important; border-spacing: 0 !important;">
+                    <tr class="onithelpRow" style="line-height: inherit !important; padding-bottom: 60px !important; display: block !important;">
+                      <td width="34%" align="center" class="swap" style="line-height: inherit !important; padding: 0 0 0 10px;" bgcolor="white">
+                        <img class="img_secureHome" src="https://docs.google.com/uc?id=1-ut-w__FD5mrOvoVxaqDxtSX4aQjg5hm" alt="Purple icon of a house inside a shield with a lock" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                      </td>
+                      <td width="64%" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <h2 class="statsLeft" style="color: black !important; font-family: 'Fira Sans' !important; letter-spacing: 1.5px !important; font-weight: 400 !important; padding-right: 30px !important;" align="start"><span style="color: #3F44E9; font-size: 28px; font-weight: 700; line-height: inherit !important;"><a href="https://www.onithome.com" target="_blank" style="text-decoration: none !important; color: #3F44E9 !important;">ONIT Home</a></span> can help you 
+                            protect your vacation home
+                            and give you valuable peace 
+                            of mind.</h2>
+                      </td>
+                    </tr>
+                  </table>
+        <!-----Essentials------>
+                <table style="width: 100%; max-width: 600px; height: 25px; line-height: inherit !important; border-spacing: 0 !important; margin: 0; background: linear-gradient(to bottom,#3F44E9,#716DF1);">
+                    <tr style="line-height: inherit !important;">
+                        <td style="line-height: inherit !important; padding: 0;">
+                            <h1 class="topHeader" style="line-height: 100% !important; font-family: 'Fira Sans' !important; color: white !important; margin-top: 50px !important; margin-bottom: 50px !important; letter-spacing: 4px !important; font-size: 48px !important; text-align:center !important;">Essentials</h1>
+                        </td>
+                    </tr>
+                </table>
+                <table dir="rtl" width="100%" class="imageTab" style="line-height: inherit !important; border-spacing: 0 !important;">
+                    <tr style="line-height: inherit !important;">
+                      <td width="49%" dir="ltr" align="center" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                          <img class="img_Camera" src="https://docs.google.com/uc?id=1bSdD_doYYFFvrWGqZr8j63hrIW0Y76Zk" alt="Outdoor video camera" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                      </td>
+                      <td width="49%" dir="ltr" align="center" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <h4 class="cameraText" style="color: #000000; font-family: 'Fira Sans' !important;">  
+                              Camera<br> Monitoring
+                              <br>
+                              <a href="https://www.onithome.com/blog/security/how-to-keep-your-vacation-home-secure-year-round/" target="_blank" style="text-decoration: none;"><span style="color: #3F44E9; padding-left: 30px; font-weight:700 !important; line-height: inherit !important;">Learn More</span><img class="rightArrow" src="https://docs.google.com/uc?id=1SD7_EI_htlejwPVSr756HPmNrpoZpBi9" style="line-height:  !important; padding-left: 10px !important; top: 1.25em !important; font-size: 10% !important; position: relative !important; max-width: 100% !important; border: 0;" />
+                              </a>
+                         </h4>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="imageTab" width="100%" style="width: 100%; max-width: 600px; border-spacing: 0 !important; margin: 0;">
+                    <tr class="burglarRow" style="line-height: inherit !important; display: block !important;">
+                      <td width="49%" class="swap" align="center" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <img class="img_SmokeDetector" src="https://docs.google.com/uc?id=17nD9E8LN7mQwNgsRpYoSPRzOBmIcc6u8" alt="White smoke detector" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                      </td>
+                      <td width="49%" dir="ltr" align="center" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                        <h4 class="smokeAlarmText" style="color: #000000; font-family: 'Fira Sans' !important;">
+                            Smoke, Water, and <br>Carbon Monoxide<br> Monitoring
+                            <br style="line-height: inherit !important;"/>
+                                <a href="https://www.onithome.com/blog/security/how-to-keep-your-vacation-home-secure-year-round/" target="_blank" style="text-decoration: none;"><img class="leftArrow" src="https://docs.google.com/uc?id=1c-MrteSqBke7kShSYsQh3t6bgdiQrw6j" alt="Purple arrow" style="padding-right: 10px !important; font-size: 10% !important; position: relative !important; max-width: 100% !important; border: 0;" /><span style="color: #3F44E9; padding-right: 30px; font-weight:700 !important; z-index:100 !important; line-height: inherit !important;">Learn More</span>
+                                </a>
+                            </h4>
+                      </td>
+                    </tr>
+                  </table>
+                  <table dir="rtl" width="100%" class="imageTab" style="line-height: inherit !important; border-spacing: 0 !important;">
+                    <tr style="line-height: inherit !important;">
+                      <td width="49%" dir="ltr" align="center" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                          <img class="img_Monitor" src="https://docs.google.com/uc?id=128UfOC72b1Okd2J-bJCjgDMkFMvp2-1g" alt="Small smart display for remote monitoring" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                      </td>
+                      <td width="49%" dir="ltr" align="center" class="swap" style="line-height: inherit !important; padding: 0;" bgcolor="white">
+                          <h4 class="monitorText" style="color: black !important; font-family: 'Fira Sans' !important; 
+                          line-height: 40px !important; 
+                          padding-right:20px !important; 
+                          padding-left:20px !important;
+                          padding-top: 0px !important; 
+                          letter-spacing: 1.5px !important;"> 
+                            24/7 Remote 
+                            Monitoring
+                              <br style="line-height: inherit !important;" /><a href="https://www.onithome.com/blog/security/how-to-keep-your-vacation-home-secure-year-round/" target="_blank" style="text-decoration: none;"><span style="color: #3F44E9; padding-left: 30px; font-weight:700 !important; line-height: inherit !important;">Learn More</span><img class="rightArrow" src="https://docs.google.com/uc?id=1SD7_EI_htlejwPVSr756HPmNrpoZpBi9" style="padding-left: 10px !important; top: 1.25em !important; font-size: 10% !important; position: relative !important; max-width: 100% !important; border: 0;" />
+                              </a>
+                              </h4>
+                      </td>
+                    </tr>
+                  <table style="border-spacing: 0 !important; padding-left: 24px; padding-right: 24px; line-height: inherit !important; margin: 60px auto 0;">
+                    <tr style="line-height: inherit !important;">
+                        <td style="line-height: inherit !important; padding: 0;">
+                            <h2 class="learnMoreVerbiage" style="color: black !important; font-family: 'Fira Sans' !important; text-align: center !important; letter-spacing: 1.5px !important; font-weight: 400 !important;">
+                                Learn more measures that you can 
+                                take to help improve the security of 
+                                your home even further.
+                            </h2>
+                        </td>
+                    </tr>
+                </table>
+    <!-------CTA-------->
+                    <table class="" align="center" style="line-height: inherit !important; border-spacing: 0 !important;">
+                        <tr style="line-height: inherit !important;">
+                            <td style="line-height: inherit !important; padding: 0;">
+                                <center style="line-height: inherit !important;">
+                                    <a href="https://www.onithome.com/blog/security/how-to-keep-your-vacation-home-secure-year-round/" target="_blank">
+                                        <button id="learnMoreCta">Learn More</button>
+                                    </a>
+                                </center>               
+                            </td>
+                        </tr>
+                    
+                    </table>
+                      <table width="100%" dir="rtl" class="imageTab" style="height: 200px; line-height: inherit !important; border-spacing: 0 !important;">
+                        <tr class="goOnlineRow" style="line-height: inherit !important; display: block !important; margin-top: 110px !important;">
+                            
+                              <td width="59%" dir="ltr" class="goOnlineData" style="line-height: inherit !important; padding: 0 40px; background: linear-gradient(to bottom,#3F44E9,#716DF1);">
+                                <h2 class="goOnlineText" style="font-family: 'Fira Sans' !important; letter-spacing: 1.5px !important; font-weight: 400 !important;">Go online or call<br>
+                                    <span style="font-weight: 700 !important; letter-spacing: 3px !important;"><a href="tel:+1-866-661-1678" style="text-decoration: none !important; color: #FFFFFF !important;">1-833-433-0331</a></span><br> to 
+                                    ask about our<br> $500 
+                                    vouchers!</span></h2>
+                              </td>
+                              <td width="39%" dir="rtl" class="swap" align="center" style="line-height: inherit !important; height:100% !important; width:100% !important; padding: 0;" bgcolor="white">
+                                <img class="img_WomanWithDog" src="https://docs.google.com/uc?id=1_6vTfWz_hTiWHQKejTvxxUkFJnVHXF03" alt="Woman typing on a laptop with her dog sitting next to her" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                              </td>
+                        </tr>
+                      </table>
+                      <table class="benefitsTable" width="100%" style="line-height: inherit !important; border-spacing: 0 !important;">
+                          <tr style="line-height: inherit !important;">
+                              <td width="33%" align="center" class="benefitsData" style="line-height: inherit !important; padding: 60px 0 0;">
+                                <img class="img_radioTower" src="https://docs.google.com/uc?id=1YAmeQ_8nTOkWRUai1g2EkTbGeJZRig_X" alt="Purple radio tower icon" style="line-height: inherit !important; padding-bottom:5px !important; max-width: 100% !important; border: 0;" />
+                                <h4 class="benefitsTitle" style="color:black !important; font-family: 'Fira Sans' !important; font-weight: 400 !important;">
+                                    24/7 Live<br>
+                                    Monitoring
+                                </h4>
+                              </td>
+                              <td width="33%" align="center" class="benefitsData" style="line-height: inherit !important; padding: 60px 0 0;">
+                                  <img class="img_radioTower" src="https://docs.google.com/uc?id=1k6SJZYX3p9RbhNpM_4fdEG8vTWthtooI" alt="Piggy bank icon" style="line-height: inherit !important; max-width: 100% !important; border: 0;" />
+                                  <h4 class="benefitsTitle" style="color:black !important;font-family: 'Fira Sans' !important; font-weight: 400 !important;">
+                                    Smart<br style="line-height: inherit !important;" /> 
+                                    Financing
+                                    </h4>
+                              </td>
+                              <td width="33%" align="center" class="benefitsData" style="line-height: inherit !important; padding: 60px 0 0;">
+                                  <img class="img_radioTower" src="https://docs.google.com/uc?id=16GX_RelUN8pHp55Fl7G8kMFJ-PFp34NP" alt="Purple moving dolly icon" style="line-height: inherit !important; max-width: 100% !important; border: 0;"/>
+                                  <h4 class="benefitsTitle" style="color:black !important;font-family: 'Fira Sans' !important; font-weight: 400 !important;">
+                                    Professional<br>
+                                    Installation
+                                    </h4>
+                              </td>
+                            </tr>  
+                        </table>
+        <!-----Footer------> 
+          <table class="footer" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 600px; line-height: inherit !important; border-spacing: 0 !important; margin: 0 auto;" bgcolor="#dddddd">
+                
+                <tr style="line-height: inherit !important;">
+                    <td align="center" dir="ltr" class="swap" width="49%" style="line-height: inherit !important; padding: 0;">
+                        <a href="https://www.facebook.com/onithome" target="_blank" title="ONIT Home - Facebook" style="text-decoration: none !important; line-height: inherit !important; color: inherit !important; border: none;" border="0">
+                            <img class="social-icons" src="https://docs.google.com/uc?id=1M_YSci6MhHch9omYJoKykYsOf_HlQSxE" alt="Facebook logo lowercase f" style="line-height: inherit !important; display: inline-block !important; margin-top: 50px !important; margin-bottom: 10px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                        <a href="https://www.instagram.com/onit_home/" target="_blank" title="ONIT Home - Instagram" style="text-decoration: none !important; line-height: inherit !important; color: inherit !important; border: none;" border="0">
+                            <img class="social-icons" src="https://docs.google.com/uc?id=1QxoP_reCAxFFOgn49MVDMc2LmSeIoj8k" alt="Instagram logo photography camera" style="line-height: inherit !important; display: inline-block !important; margin-top: 50px !important; margin-bottom: 10px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                        <a href="https://twitter.com/onit_home" target="_blank" title="ONIT Home - Twitter" style="text-decoration: none !important; line-height: inherit !important; color: inherit !important; border: none;" border="0">
+                            <img class="social-icons" src="https://docs.google.com/uc?id=17Jm4ycpzTggHtKFd5iVOwMare8koa8Ny" alt="Twitter logo bird flying to the right" style="line-height: inherit !important; display: inline-block !important; margin-top: 50px !important; margin-bottom: 10px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC4egDLFcQwGj-b4QRvCuPfA" target="_blank" title="ONIT Home - Youtube" style="text-decoration: none !important; line-height: inherit !important; color: inherit !important; border: none;" border="0">
+                            <img class="social-icons" src="https://docs.google.com/uc?id=1Oo_OnaYqFFizvl1J-8OBZMDlrJXlDxyi" alt="Youtube logo triangle play button" style="line-height: inherit !important; display: inline-block !important; margin-top: 50px !important; margin-bottom: 10px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                        <a href="https://www.linkedin.com/company/onithome/" target="_blank" title="ONIT Home - LinkedIn" style="text-decoration: none !important; line-height: inherit !important; color: inherit !important; border: none;" border="0">
+                            <img class="social-icons" src="https://docs.google.com/uc?id=1vdvsrbI4S2tFDfgOWh79jq-_JJiJsTce" alt="LinkedIn logo lowecase i,n" style="line-height: inherit !important; display: inline-block !important; margin-top: 50px !important; margin-bottom: 10px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                    </td>
+                    <td align="center" dir="ltr" class="swap" width="49%" style="line-height: inherit !important; padding: 0;">
+                        <a href="https://www.onithome.com/?aid=i00053&amp;utm_source=footer&amp;utm_medium=email" target="_blank" title="ONIT Home" style="line-height: inherit !important; text-decoration: none !important; color: inherit !important;">
+                            <img class="onit-footer" src="https://www.onithome.com/uploads/email_images/email_10/footer-logo_B1lC5Ma.png" title="ONIT Home" alt="ONIT Home logo" width="80" style="width: 80px; line-height: inherit !important; margin-bottom: 30px !important; max-width: 100% !important; border: 0;" />
+                        </a>
+                    </td>
+                </tr>
+                
+                <table style="width: 100%; line-height: inherit !important; border-spacing: 0 !important;" bgcolor="#dddddd">
+                    <tr style="line-height: inherit !important;">
+                        <td class="footer-padding" style="line-height: inherit !important; padding: 0 10px;">
+                            <p class="footerText" style="letter-spacing: 1.95px !important; color: black !important; text-align: center !important; font-weight: 400 !important; font-family: 'Fira Sans' !important; padding-left: 30px !important; margin: 20px 0 2px;">This email was sent by ONIT Home.<br style="line-height: inherit !important;" />
+                            2701 Brown Trail Suite 200, Bedford, TX 76021.<br style="line-height: inherit !important;" />
+                            Copyright © 2021</p>
+                            <p class="footerText" style="letter-spacing: 1.95px !important; color: black !important; font-weight: 400 !important; text-align: center !important; font-family: 'Fira Sans' !important; padding-left: 30px !important; margin: 20px 0 2px;"><a href="{{unsubscribeUrl}}" title="unsubscribe" target="_blank" style="color: inherit !important; line-height: inherit !important; text-decoration: none !important;">Click here to unsubscribe.</a></p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <tr style="height: 30px; line-height: inherit !important;" bgcolor="#dddddd">
+                    <td style="line-height: inherit !important; padding: 0;"> </td>
+                </tr>
+            </table>
+      
+    
+  </table></td></tr></table></div></center></body>
+</html>
